@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="app">
     <Header />
-      <h2>Carboncopy</h2>
+      
     </div>
   );
 }
