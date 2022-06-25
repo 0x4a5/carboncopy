@@ -9,9 +9,22 @@ Name: Sonic Silver
 Hex: 777777
 RGB: (119, 119, 119)
 
+	
+Name: Police Blue
+Hex: 344c64
+RGB: (52, 76, 100)
 
 Name: Vampire Black
 Hex: 0C0004
 RGB: (12, 0, 4)
 
 */
+
+.app {
+    height: 100vh;
+}
+
+.app_body {
+    display: flex;
+    height: 100vh;
+}
