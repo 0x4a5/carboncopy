@@ -50,7 +50,7 @@ function EmailList() {
       </div>
       
          <div className='emailList_sections'>
-                <Section Icon={InboxIcon} title='primary' color='red' selected />
+                <Section Icon={InboxIcon} title='Primary' color='red' selected />
                 <Section Icon={PeopleAltIcon} title='Social' color='#e0dfd1'  />
                 <Section Icon={LocalOfferIcon} title='Promotional' color='#344c64' />
             </div>
