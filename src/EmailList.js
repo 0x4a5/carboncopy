@@ -83,12 +83,17 @@ function EmailList() {
           />
         ))}
 
-        <EmailRows
+
+        
+          {/* // Test Data */}
+          
+         <EmailRows
           title="Original Test Email"
           subject="Test Data"
           description="Test Email"
           time="2200"
         />
+    
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import EmailList from "./EmailList";
 import { selectSendMessageIsOpen } from "./features/mailSlice";
+import { selectUser } from "./features/userSlice";
 import Header from "./Header";
 import Mail from "./Mail";
 import SendMail from "./SendMail";
@@ -11,11 +12,11 @@ import Sidebar from "./Sidebar";
 
 function App() {
   const sendMessageIsOpen = useSelector(selectSendMessageIsOpen);
+  const user = useSelector(selectUser);
 
   return (
     <div className="app">
       <Header />
-
       <div className="app_body">
         <Sidebar />
         <Routes>
