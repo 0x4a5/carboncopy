@@ -16,7 +16,7 @@
 .sidebarSelections--active,
 .sidebarSelections--active > p,
 .sidebarSelections--active > h3 {
-    background-color: #F8FCFF;
+    background-color: white;
     color: #344C64;
     font-weight: 700 !important;
 }
@@ -44,4 +44,5 @@
 
 .sidebarSelections:hover > p { 
     display: inline;
+    color: #b47c4d;
 }
