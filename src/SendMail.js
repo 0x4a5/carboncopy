@@ -4,7 +4,9 @@ import CancelIcon from "@material-ui/icons/Cancel";
 import Button from "@material-ui/core/Button";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { closeSendMessage } from './features/mailSlice'
+import { closeSendMessage } from "./features/mailSlice";
+import { db } from "./firebase";
+import firebase from "firebase/compat/app";
 
 function SendMail() {
   // const { register, handleSubmit, errors } = useForm();
@@ -18,13 +20,23 @@ function SendMail() {
 
   const onSubmit = (formData) => {
     console.log(formData);
+    db.collection("emails").add({
+      to: formData.to,
+      subject: formData.subject,
+      message: formData.message,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+    dispatch(closeSendMessage());
   };
 
   return (
     <div className="sendMail">
       <div className="sendMail_header">
         <h3>New Message</h3>
-        <CancelIcon onClick={() => dispatch(closeSendMessage())} className="sendMail_close" />
+        <CancelIcon
+          onClick={() => dispatch(closeSendMessage())}
+          className="sendMail_close"
+        />
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)}>
